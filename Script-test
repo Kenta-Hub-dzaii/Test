@@ -863,18 +863,6 @@ task.spawn(function()
 end)
 
 
--- Kiểm tra xem Key có tồn taij và đúng không
-if getgenv().Key and keys[getgenv().Key] then
-    print("Whitelist success!")
-  -- Dán script của bây vào đây
-else
-    if not getgenv().Key then
-        -- Nếu không có key, kêu nó nhập zô
-        warn("please enter your key!")
-    end
-    -- Nếu key không đúng, kick mịa nó luôn
-    game.Players.LocalPlayer:Kick("Invalid Key! Please enter your correct key!")
-end
 local ScreenGui = Instance.new("ScreenGui")
 local buoi = Instance.new('UICorner')
 local KeyUI = Instance.new("Frame")
